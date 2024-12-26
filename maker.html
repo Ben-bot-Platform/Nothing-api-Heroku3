@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOTHING | Docs</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Header Section */
+    .header {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-bottom: 5px solid #ff5c8d;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #e0e0e0;
+      margin-top: 15px;
+      opacity: 0;
+      animation: fadeInSub 2.5s 0.5s ease-out forwards;
+    }
+
+    /* Bottom Menu Styling */
+    .menu-container {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #ff5c8d;
+      padding: 20px 30px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 1000;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .menu-container .icon {
+      font-size: 32px;
+      color: white;
+      margin-right: 12px;
+      transition: transform 0.3s;
+    }
+
+    .menu-container .text {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      opacity: 0;
+      animation: fadeInText 1.5s 0.8s ease-out forwards;
+    }
+
+    /* Hover Effect */
+    .menu-container:hover {
+      background-color: #ff7ab0;
+      transform: scale(1.05);
+    }
+
+    .menu-container:hover .icon {
+      transform: rotate(15deg);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInSub {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInText {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Center Content */
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      text-align: center;
+      font-size: 22px;
+      color: #333;
+      animation: fadeIn 3s ease-out;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    MAKER Futures
+    <div class="subtitle">Stay tuned, our MAKER menu is coming soon!</div>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="content">
+    <p>Explore new possibilities with our upcoming MAKER features.</p>
+  </div>
+
+  <!-- Bottom Right Menu -->
+  <div class="menu-container">
+    <i class="fa-solid fa-robot icon"></i>
+    <span class="text">MAKER Menu Coming Soon</span>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "api-dashboard",
+  "description": "API Dashboard with Maker, Downloader, and More",
+  "repository": "https://github.com/Ben-bot-Platform/Nothing-api-Heroku",
+  "keywords": ["node", "express", "api"],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "scripts": {},
+  "addons": []
+}

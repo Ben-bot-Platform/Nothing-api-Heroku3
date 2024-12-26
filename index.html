@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NOTHING | Docs</title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content name="keywords">
+    <meta content="NOTHING Rest Api For Developers..." name="description">
+    <link href="https://files.catbox.moe/4i7dp7.jpg" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://files.catbox.moe/81bga6.css" rel="stylesheet">
+    <link href="https://files.catbox.moe/eo9xo1.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://files.catbox.moe/gxopo6.css" rel="stylesheet">
+    <link href="https://files.catbox.moe/4q9hhp.css" rel="stylesheet">
+  </head>
+  <body> 
+
+<!----------------------------------------------------------------------------------------------->
+
+<div class="container-fluid position-relative d-flex p-0"></div>
+<div class="sidebar pe-4 pb-3">
+<nav class="navbar bg-secondary navbar-dark">
+<a href="../" class="navbar-brand mx-4 mb-3">
+<h3 class="text-primary">
+<i></i>Free Palestine
+</h3>
+</a>
+<div class="d-flex align-items-center ms-4 mb-4">
+<div class="position-relative">
+<img class="rounded-circle" src="https://files.catbox.moe/4i7dp7.jpg" alt style="width:40px;height:40px">
+<div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+</div>
+<div class="ms-3">
+<h6 class="mb-0">NOTHING API</h6>
+<span></span>
+</div>
+</div>
+<div class="navbar-nav w-100">
+<a href="../docs" class="nav-item nav-link">
+<i class="bi bi-speedometer2 me-2"></i>Dashboard </a>
+<div class="nav-item">
+  <a href="../ai" class="nav-link">
+    <i class="fa-solid fa-robot me-2"></i>AI
+  </a>
+</div>  
+<a href="../download" class="nav-item nav-link">
+<i class="fa-solid fa-download me-2"></i>Downloaders </a>
+<a href="../search" class="nav-item nav-link">
+<i class="bi bi-search me-2"></i>Search </a>
+<a href="../islam" class="nav-item nav-link">
+<i class="fa-solid fa-mosque me-2"></i>Islamic </a>
+<a href="../stalk" class="nav-item nav-link">
+<i class="bi bi-stars me-2"></i>Stalker </a>
+<a href="../tools" class="nav-item nav-link">
+<i class="bi bi-tools me-2"></i>Tools </a>
+<a href="../converter" class="nav-item nav-link">
+<i class="bi bi-repeat me-2"></i>Converter</a>
+<div class="nav-item dropdown">
+<a href="../maker" class="nav-item nav-link">
+<i class="bi bi-stars me-2"></i>Maker </a>
+<a href="../nsfw" class="nav-item nav-link">
+  <i class="bi bi-hand-thumbs-down me-2"></i>Nsfw</a>
+</div>  
+</div>
+</div>
+</nav>
+</div>
+
+<!----------------------------------------------------------------------------------------------->
+
+    <div class="content">
+  <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+    <button class="sidebar-toggler flex-shrink-0">
+      <i class="fa fa-bars" style="color: white;"></i> <!-- اینجا رنگ سفید به آیکون داده می‌شود -->
+    </button>
+    <div class="navbar-nav align-items-center ms-auto">
+    </div>
+  </nav>
+      <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+          <div class="col-sm-6 col-xl-6">
+            <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+              <i class="bi bi-eye fa-3x text-primary"></i>
+              <div class="ms-3">
+                <p class="mb-2 text-primary">Total Visitors</p>
+                <h6 class="mb-0 text-end" id="visitor">Loading...</h6>
+                <script>
+                  setInterval(function() {
+                  var xhr = new XMLHttpRequest();
+                  xhr.open("GET", "https://bk9.fun/visit");
+                  xhr.responseType = "json";
+                  xhr.onload = () => document.getElementById('visitor').innerText = '' + xhr.response.visitors + '';
+                  xhr.send()
+              }, 1000);
+              </script>
+              </div>
+            </div>
+          </div>
+
+<!----------------------------------------------------------------------------------------------->
+
+          <div class="col-sm-6 col-xl-6">
+            <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+              <i class="bi bi-calendar-week fa-3x text-primary"></i>
+              <div class="ms-3">
+                <p class="mb-2 text-primary">Total Request </p>
+                <h6 class="mb-0 text-end" id="visitortdy">Loading...</h6>
+                <script>
+                  setInterval(function() {
+                  var xhr = new XMLHttpRequest();
+                  xhr.open("GET", "https://bk9.fun/count");
+                  xhr.responseType = "json";
+                  xhr.onload = () => document.getElementById('visitortdy').innerText = '' + xhr.response.visitor_count + '';
+                  xhr.send()
+              }, 1000);
+              </script>
+              </div>
+            </div>
+          </div>
+
+<!----------------------------------------------------------------------------------------------->
+
+          <div class="col-sm-6 col-xl-6">
+            <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+              <i class="bi bi-clock fa-3x text-primary"></i>
+              <div class="ms-3">
+                <p class="mb-2 text-primary">ㅤㅤㅤㅤㅤㅤㅤㅤㅤRuntime</p>
+                <h6 class="mb-0 text-end" id="runtime">Loading...</h6>
+                <script>
+                  setInterval(function() {
+                  var xhr = new XMLHttpRequest();
+                  xhr.open("GET", "https://bk9.fun/status");
+                  xhr.responseType = "json";
+                  xhr.onload = () => document.getElementById('runtime').innerText = '' + xhr.response.runtime + '';
+                  xhr.send()
+              }, 1000);
+              </script>
+              </div>
+            </div>
+          </div>
+
+<!----------------------------------------------------------------------------------------------->
+
+          <div class="col-sm-6 col-xl-6">
+            <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+              <i class="bi bi-memory fa-3x text-primary"></i>
+              <div class="ms-3">
+                <p class="mb-2 text-primary">ㅤㅤㅤㅤㅤㅤㅤㅤㅤUsage</p>
+                <h6 class="mb-0 text-end" id="memory">Loading...</h6>
+                <script>
+                  setInterval(function() {
+                  var xhr = new XMLHttpRequest();
+                  xhr.open("GET", "https://bk9.fun/status");
+                  xhr.responseType = "json";
+                  xhr.onload = () => document.getElementById('memory').innerText = '' + xhr.response.memory + '';
+                  xhr.send()
+              }, 1000);
+              </script>
+              </div>
+            </div>
+          </div>
+
+<!----------------------------------------------------------------------------------------------->
+
+        </div>
+      </div>
+      <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+          <div class="col-sm-12 col-xl-6">
+            <div class="bg-secondary rounded h-100 p-4">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h6 class="mb-0"><i class="bx bx-news text-primary me-2"></i>Lastest Updates Note</h6>
+                <a href="../changelog">Show All</a>
+            </div>
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <ul>
+                  <ul>
+                	<li>2024-12-20: Added Ytmp4 and Ytmp3</li>
+                    <li>2024-12-10: Added Tempmail and Tempmail inbox</li>
+                    <li>2024-10-29: Added Qrcode and Tinyurl</li>
+                    <li>2024-09-28: Added Ssweb and Funcy text</li>
+                    <li>2024-06-04: Added Shorturl and YouTube search</li>
+                    <li>2024-05-02: Website creation</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          </div>
+      </div>
+      <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+          <div class="col-sm-12 col-xl-6">
+            <div class="bg-secondary rounded h-100 p-4">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h6 class="mb-0"><i class="bx bx-news text-primary me-2"></i>FREE APIKEY</h6>
+            </div>
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <ul>
+                  <ul>
+                	<li>FREE APIKEY IS : nothing-ben</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-xl-6">
+            <div class="bg-secondary rounded h-100 p-4">
+              <div class="bg-secondary rounded h-100 p-4">
+                <h6 class="mb-4"><i class="bi bi-clipboard-check-fill me-2"></i>Contact Nothing</h6>
+                  <div class="wa">
+                  <a href="../contact" target="_blank">
+                    <i class="bi bi-github me-2"></i>
+                    Contact page
+                  </a>
+                </div>
+                  <div class="wa">
+                  <a href="https://whatsapp.com/channel/0029Vasu3qP9RZAUkVkvSv32" target="_blank">
+                    <i class="bi bi-whatsapp me-2"></i>
+                    Whatsapp channel
+                  </a>
+                </div>
+                <div class="wa">
+                  <a href="https://github.com/TraderAn-King" target="_blank">
+                    <i class="bi bi-github me-2"></i>
+                    Github profile
+                  </a>
+                </div>
+                <div class="wa">
+                  <a href="https://t.me/Aloneboyabn" target="_blank">
+                    <i class="bi bi-github me-2"></i>
+                    Telegram profile
+                  </a>
+                </div>
+              </div>
+          </div>
+        </div>
+      <div class="container-fluid pt-4 px-4">
+  <div class="bg-secondary rounded-top p-4">
+    <div class="row">
+      <div class="col-12 col-sm-6 text-center text-sm-start">
+        2024 © NOTHING APIS
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+    
+<!----------------------------------------------------------------------------------------------->
+
+    <head>
+  <!-- اضافه کردن لینک Font Awesome برای آیکن -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    /* استایل دکمه با گوشه‌های گرد */
+    #play-button {
+      background-color: #FFDD00; /* رنگ زرد */
+      color: black;
+      border: none;
+      padding: 8px 15px; /* کمی بزرگتر کردن دکمه */
+      font-size: 18px; /* فونت بزرگتر */
+      cursor: pointer;
+      border-radius: 50px; /* گوشه‌های گرد */
+      position: fixed; /* ثابت در پایین سمت راست */
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000; /* بالا بودن دکمه از سایر عناصر */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* سایه سبک برای دکمه */
+      transition: all 0.3s ease; /* افکت انتقال نرم */
+    }
+
+    /* افکت تغییر رنگ و سایه هنگام hover */
+    #play-button:hover {
+      background-color: #FFAA00; /* تغییر رنگ هنگام hover */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* سایه قوی‌تر هنگام hover */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- دکمه پخش موسیقی -->
+  <button id="play-button">
+    Play Music
+  </button>
+
+  <!-- فایل صوتی از URL -->
+  <audio id="audio-player" src="https://files.catbox.moe/v3cozu.mp3"></audio>
+
+  <script>
+    // بارگذاری وضعیت پخش موسیقی از localStorage
+    const audio = document.getElementById('audio-player');
+    const button = document.getElementById('play-button');
+    const isPlaying = localStorage.getItem('isPlaying') === 'true';
+
+    if (isPlaying) {
+      audio.play();
+      button.innerHTML = 'Pause Music';
+    }
+
+    // کنترل پخش موسیقی
+    button.addEventListener('click', function () {
+      if (audio.paused) {
+        audio.play();
+        localStorage.setItem('isPlaying', 'true'); // ذخیره وضعیت پخش
+        button.innerHTML = 'Pause Music'; // تغییر متن دکمه به Pause Music
+      } else {
+        audio.pause();
+        localStorage.setItem('isPlaying', 'false'); // ذخیره وضعیت توقف
+        button.innerHTML = 'Play Music'; // تغییر متن دکمه به Play Music
+      }
+    });
+
+    // بررسی وضعیت صفحه (آیا در پس‌زمینه است یا نه)
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        audio.pause(); // زمانی که صفحه مخفی می‌شود، موسیقی متوقف شود
+      } else {
+        if (localStorage.getItem('isPlaying') === 'true') {
+          audio.play(); // اگر وضعیت پخش ذخیره شده باشد، موسیقی ادامه یابد
+        }
+      }
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://files.catbox.moe/3p4k9s.js"></script>
+  <script src="https://files.catbox.moe/ry858e.js"></script>
+  <script src="https://files.catbox.moe/l4gy5j.js"></script>
+  <script src="https://files.catbox.moe/5o6pbi.js"></script>
+  <script src="https://files.catbox.moe/yhrqcd.js"></script>
+  <script src="https://files.catbox.moe/o1oa8m.js"></script>
+  <script src="https://files.catbox.moe/ppm890.js"></script>
+  <script src="https://files.catbox.moe/bs32q1.js"></script>
+  <script src="https://files.catbox.moe/j6v01i.js"></script>
+  <script src="https://files.catbox.moe/thc37p.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const rows = document.querySelectorAll('tbody tr');
+      rows.forEach((row, index) => {
+        const th = row.querySelector('th[scope="row"]');
+        if (th) {
+          th.textContent = index + 1;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

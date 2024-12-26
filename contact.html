@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        section {
+            padding: 15px;
+            text-align: center;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .social-links a {
+            font-size: 25px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .send-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .send-btn:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .social-links {
+                gap: 5px;
+            }
+            .social-links a {
+                font-size: 20px;
+            }
+            .send-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+	
+	<video class="video-bg" autoplay muted loop>
+        <source src="https://files.giftedtech.my.id/file/gifted-api.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+<header22 style="
+    background-color: #075e54;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 400px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+">
+    <span style="transform: translateX(50px);">NOTHING CONTACT</header22>
+
+<section>
+    <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required><br>
+        <input type="email" id="email" placeholder="Your Email" required><br>
+        <input type="text" id="whatsapp" placeholder="Your WhatsApp Number" required><br>
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea><br>
+        <button type="button" id="send-btn" class="send-btn" onclick="sendMessage()">Send</button>
+    </form>
+
+    <div class="social-links">
+        <a href="https://www.facebook.com/AMiR.SaLleR" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30"></a>
+        <a href="https://t.me/Aloneboyabn" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" width="30">
+</a>
+        <a href="https://github.com/TraderAn-King" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="30"></a>
+        <a href="https://wa.me/+93744215959" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30"></a>
+        <a href="https://youtube.com/NothingTech/V1" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="30"></a>
+    </div>
+</section>
+
+<footer style="
+    background-color: #121212; 
+    color: #ffffff; 
+    text-align: center; 
+    padding: 20px 10px; 
+    font-size: 0.9rem; 
+    border-top: 1px solid #333;">
+    <a href="https://whatsapp.com/channel/0029Vasu3qP9RZAUkVkvSv32" 
+       style="color: #00ff7f; text-decoration: none; font-weight: bold; border-bottom: 2px solid #00ff7f;">
+        JOIN WHATSAPP CHANNEL
+    </a>
+    <br><br>
+    © <script>document.write(new Date().getFullYear());</script> MADE BY 
+    <a href="https://github.com/TraderAn-King" 
+       style="color: #00ff7f; text-decoration: none; font-weight: bold; border-bottom: 2px solid #00ff7f;">
+        NOTHING TECH
+    </a>
+</footer>
+
+<script>
+    function sendMessage() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const whatsapp = document.getElementById('whatsapp').value;
+        const message = document.getElementById('message').value;
+
+        if (!name || !email || !whatsapp || !message) {
+            alert("Please fill all fields.");
+            return;
+        }
+
+        const token = '7276338531:AAGsSHmdJkf3rOTBXaTcUCUQghvNyNZr_80';
+        const chatId = '2048310529'; // ID of the user you want to send the message to
+        const text = `New message from ${name}:\nEmail: ${email}\nWhatsApp: ${whatsapp}\nMessage: ${message}`;
+        
+        const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
+        
+        // Disable the send button and change the text
+        const sendBtn = document.getElementById('send-btn');
+        sendBtn.innerHTML = 'Sending...';
+        sendBtn.disabled = false;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert('Message sent successfully!');
+                    // Clear form fields
+                    document.getElementById('name').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('whatsapp').value = '';
+                    document.getElementById('message').value = '';
+                } else {
+                    alert('Error sending message. Please try again.');
+                }
+            })
+            .catch(error => alert('Error: ' + error))
+            .finally(() => {
+                // Enable the send button again after 10 seconds
+                setTimeout(() => {
+                    sendBtn.innerHTML = 'Send';
+                    sendBtn.disabled = false;
+                }, 10000);
+            });
+    }
+</script>
+
+</body>
+</html>
