@@ -8,7 +8,9 @@ const port = process.env.PORT || 8080;
 
 const apiKeyFile = path.join(__dirname, 'apikeyall.json'); // مسیر فایل کلیدها
 const userIpFile = path.join(__dirname, 'allusersip.json'); // مسیر ذخیره اطلاعات کاربران
-
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 // مدت زمان یک روز (24 ساعت)
 const timeLimit = 24 * 60 * 60 * 1000;
 
