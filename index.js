@@ -73,6 +73,35 @@ const checkUserLimit = (apikey, ip) => {
 
 //TEMP MAIL
 // DOC API
+app.get('/check', (req, res) => {
+    const apikey = req.query.apikey; // دریافت کلید API
+    const ip = req.ip; // دریافت آدرس IP کاربر
+
+    if (!apikey || !apiKeys[apikey]) {
+        return res.status(401).json({
+            status: false,
+            result: 'Invalid or missing API key.'
+        });
+    }
+
+    const keyData = checkUserLimit(apikey, ip);
+
+    // محاسبه میزان استفاده باقی‌مانده
+    const remainingUsage = keyData.limit - keyData.used;
+
+    // پاسخ به کاربر با اطلاعات مورد نظر
+    res.json({
+        status: true,
+        result: {
+            apikey: apikey,
+            used: keyData.used,
+            limit: keyData.limit,
+            remaining: remainingUsage,
+            lastReset: new Date(keyData.lastReset).toLocaleString(),
+            ipUsage: userIps[ip] ? userIps[ip].used : 0
+        }
+    });
+});
 app.get('/docs', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
